@@ -44,8 +44,8 @@ export const loginAdmin = async (req, res) => {
     res.cookie("adminToken", token, {
       expires: new Date(Date.now() + 8 * 3600000), // 8 hours
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
+     secure: true,
+      sameSite: 'None',
       path: '/'
     });
 
@@ -133,7 +133,7 @@ export const logoutAdmin = (req, res) => {
     res.clearCookie('adminToken', {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
+      sameSite: 'None',
       path: '/'
     }).status(200).json({ 
       success: true,
