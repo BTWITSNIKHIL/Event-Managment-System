@@ -1,0 +1,53 @@
+.participated-events-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+  }
+  
+  h2 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .events-list {
+    margin-top: 20px;
+  }
+  
+  .event-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .event-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .event-card h3 {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .event-card p {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .refresh-btn {
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .refresh-btn:hover {
+    background-color: #2563eb;
+  }
+  

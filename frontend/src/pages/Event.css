@@ -1,0 +1,52 @@
+.events-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .events-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .event-card {
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: all 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .event-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .event-card p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .participate-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .participate-btn:hover {
+    background-color: #218838;
+  }
+  
