@@ -117,11 +117,10 @@ export const login = async (req, res) => {
 
     // Setting cookie with httpOnly, secure, and sameSite options
     res.cookie("token", token, {
-      expires: new Date(Date.now() + 8 * 3600000), // Cookie expiry
-      httpOnly: true, // Cannot be accessed by JavaScript
-      secure: process.env.NODE_ENV === "production", // Only sends cookies over HTTPS in production
-      sameSite: "Strict", // Restricts sending cookies with cross-site requests
-    });
+  httpOnly: true,
+  secure: process.env.NODE_ENV === "production",
+  sameSite: "None", // for cross-site cookies with Netlify
+});
 
     return res.status(200).send({ message: "Login Successfully" });
   } catch (err) {
