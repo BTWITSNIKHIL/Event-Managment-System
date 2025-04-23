@@ -129,11 +129,13 @@ export const login = async (req, res) => {
   }
 };
 export const logOut = async (req, res) => {
-  res.cookie("token", null, {
-    expires: new Date(Date.now()),
-    httpOnly: true, // Make sure this matches the cookie settings used when logging in
-    path: "/",      // Specify the path if it was set during login
-  }).send({ message: "Logout Successful" });
+  res.cookie("token", "", {
+    expires: new Date(0),           // Expire immediately
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production", // Important for HTTPS
+    sameSite: "None",               // Allow cross-site cookies
+    path: "/",                      // Match login cookie path
+  });
 };
 
 
